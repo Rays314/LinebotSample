@@ -1,7 +1,7 @@
 function doGet(e) {
   try {
     // log({ "func": "doGet", "event": e });
-    let resultPage = Route(e);
+    const resultPage = Route(e);
     return resultPage;
   }
   catch (ex) {

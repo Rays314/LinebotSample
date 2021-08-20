@@ -127,64 +127,11 @@ function initializeTextRules() {
     },
   });
 
-  this.TextRules.push({
-    name: "參與投票", check: function () {
-      return this.Data.userMessage == "我要參與現場投票";
-    }, react: function () {
-      let bubble = {
-        "type": "bubble",
-        "body": {
-          "type": "box",
-          "spacing": "sm",
-          "layout": "vertical",
-          "contents": [
-            {
-              "type": "text",
-              "text": "您的答案",
-              "size": "xxl",
-              "align": "center",
-              "wrap": true
-            },
-            {
-              "type": "button",
-              "style": "primary",
-              "action": { "type": "message", "label": "選項1", "text": "1" }
-            },
-            {
-              "type": "button",
-              "style": "primary",
-              "action": { "type": "message", "label": "選項2", "text": "2" }
-            },
-            {
-              "type": "button",
-              "style": "primary",
-              "action": { "type": "message", "label": "選項3", "text": "3" }
-            },
-            {
-              "type": "button",
-              "style": "primary",
-              "action": { "type": "message", "label": "選項4", "text": "4" }
-            },
-            {
-              "type": "text",
-              "wrap": true,
-              "align": "center",
-              "text": "提示：沒有收到回傳的信息，就代表投票成功。"
-            }
-          ]
-        }
-      };
-
-      //回傳訊息
-      return LineMessage.FlexBubble("您的答案", bubble);
-    },
-  });
-
   //新增邏輯處理
   //name:紀錄使用
   //check:檢查是否有回覆的需要
   //react:處理回覆訊息
-  /*
+  
   this.TextRules.push({
     name: "回聲", check: function () {
       let word = this.Data.userMessage;
@@ -201,7 +148,7 @@ function initializeTextRules() {
       return LineMessage.Text(word + "\n(received by bot)");
     },
   });
-  */
+  
 
   //新增回覆
   //line.add(msg);
