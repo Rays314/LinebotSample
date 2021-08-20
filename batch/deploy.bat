@@ -6,7 +6,7 @@ if "%~1"=="" (
     echo The description must be supplied as a command line argument.
 ) else (
     :: Deploy on Google with a consistent id
-    echo clasp deploy -i "Fill in the version id here" -d ^"%~1^"
-    clasp deploy -i "Fill in the version id here" -d ^"%~1^"
+    echo clasp deploy -i "deployment ID" -d ^"%~1^"
+    clasp deploy -i "deployment ID" -d ^"%~1^"
 )
 exit /B %errorlevel%
