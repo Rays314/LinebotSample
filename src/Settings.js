@@ -2,17 +2,16 @@ const CHANNEL_ACCESS_TOKEN = '';
 
 const LINE_BOT_ID = '';
 
-// Not used
 const LINENOTIFY = {
   CLIENTID: '',
   CLIENTSECRET: '',
-}
+};
 
 // Not used
 const LINELOGIN = {
   CLIENTID: '',
   CLIENTSECRET: '',
-}
+};
 
 // Not used
 const LIFFURL = '';
@@ -22,7 +21,7 @@ const SAVE_OPTIONS = {
   "USER_DATA_SHEET_NAME": "名單",
   "TO_SAVE_GROUP_DATA": true,
   "TO_SAVE_USER_DATA": true,
-}
+};
 
 /**
  * Guards of fetching in the Line APIs.  
@@ -48,4 +47,4 @@ const FETCH_OPTIONS = {
   "TO_GET_USER_PROFILE": true,
   "TO_GET_ROOM_MEMBER_PROFILE": true,
   "TO_GET_GROUP_MEMBER_PROFILE": true,
-}
+};
