@@ -99,7 +99,7 @@ It is a line chatbot written in Google Apps Script (Javascript) with Google shee
     1. Download the project to the `src` folder under the working directory with the command. (Note that `<script ID>` can be found in the project settings)  
         `clasp clone <script ID> --rootDir ./src`
 
-1. Deploy on Google with the following instructions in the **legacy** editor
+1. Deploy on Google with the following instructions in the **legacy** editor (Why lagacy: [#1](/../../issues/1))
     1. Switch to the legacy editor by entering the script editor and click the “Use legacy editor” on the upper-right corner.
     1. Click “publish” on the toolbar
     1. Project version: New
@@ -110,7 +110,7 @@ It is a line chatbot written in Google Apps Script (Javascript) with Google shee
 <a id="editing-and-uploading-the-codes-to-github-and-google"></a>
 ### Editing and uploading the codes to Github and Google
 1. Edit…
-1. Upload to Github ([More commands](https://docs.google.com/document/d/1c-OrQLbNHiUpPAVxULZvyaGUupKESsC5f1XQFVBI12A))  
+1. Upload to Github  (Why git before clasp: [#3](/../../issues/3)) ([More commands](https://docs.google.com/document/d/1c-OrQLbNHiUpPAVxULZvyaGUupKESsC5f1XQFVBI12A))  
     `git add .`
 
     `git commit`
@@ -127,7 +127,7 @@ It is a line chatbot written in Google Apps Script (Javascript) with Google shee
 
 <a id="deploy-on-google"></a>
 ### Deploy on Google
-1. Get the `<deployment ID>`. It is followed by `“@1 - Initial deployment”` from the the result of the command.  
+1. Get the `<deployment ID>`. It is followed by `“@1 - Initial deployment”` from the the result of the command. (Why you should get: [#2](/../../issues/2))  
     `clasp deployments`
 1. Deploy on Google  
     `clasp deploy -d <description> -i <deployment ID>`
