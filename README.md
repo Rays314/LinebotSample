@@ -26,8 +26,11 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 
 ---
 <a id="setup-the-environment"></a>
+
 ## Setup the environment
+
 <a id="notice"></a>
+
 ### Notice:
 * All the following commands are run in a command prompt (terminal) in the working directory of the project in a **single** line per block. In detail, ...
     1. [Open a command prompt in Windows](https://www.businessinsider.com/how-to-open-command-prompt)
@@ -36,11 +39,13 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
     `cd <dir>`
 
 <a id="node-js-and-npm"></a>
+
 ### Node.js and NPM
 * Functionalities: Run clasp.
 * Installation instructions: https://phoenixnap.com/kb/install-node-js-npm-on-windows
 
 <a id="visual-studio-code"></a>
+
 ### Visual Studio Code (optional)
 * Functionalities: Editing codes off line
 * Installation instructions:
@@ -60,6 +65,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
         `npm install @types/google-apps-script`
 
 <a id="clasp"></a>
+
 ### Clasp
 * Functionalities: Update the changes of codes on a computer to Google.
 * Installation instructions ([Ref.](https://developers.google.com/apps-script/guides/clasp)): 
@@ -72,15 +78,18 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
         `npm install inquirer`
 
 <a id="git"></a>
+
 ### Git
 * Functionalities: Version contorl and collaboration
 * Installation instructions: Download from [its official website](https://git-scm.com/downloads) and install it.
 ---
 
 <a id="working-with-both-clasp-and-git-in-vs-code"></a>
+
 ## Working with Both Clasp and Git in VS Code
 
 <a id="preparations"></a>
+
 ### Preparations
 1. Sign up on [Github](https://github.com/).
 1. [Create a repository](https://docs.github.com/en/get-started/quickstart/create-a-repo) and copy the repo path (hyperlink) as `<path>`.
@@ -113,6 +122,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
     1. Who has access to the app: Anyone , even anonymous
 
 <a id="editing-and-uploading-the-codes-to-github-and-google"></a>
+
 ### Editing and uploading the codes to Github and Google
 1. Edit…
 1. Upload to Github  (Why git before clasp: [#3](/../../issues/3)) ([More commands](https://docs.google.com/document/d/1c-OrQLbNHiUpPAVxULZvyaGUupKESsC5f1XQFVBI12A))  
@@ -131,6 +141,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
         by typing `b<tab>\p<tab><enter>`
 
 <a id="deploy-on-google"></a>
+
 ### Deploy on Google
 1. Get the `<deployment ID>`. It is followed by `“@1 - Initial deployment”` from the the result of the command. (Why you should get: [#2](/../../issues/2))  
     `clasp deployments`
