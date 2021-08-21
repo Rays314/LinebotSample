@@ -132,7 +132,7 @@ It is a line chatbot written in Google Apps Script (Javascript) with Google shee
 1. Deploy on Google  
     `clasp deploy -d <description> -i <deployment ID>`
 
-    Or equivalently,  
+    Or equivalently, ([Ref.](https://github.com/google/clasp))  
     `clasp deploy --description <description> --deploymentId <deployment ID>`
 1. Note: The above-mentioned commands can be automated by
     1. (Do it once) Get the `<deployment ID>` and replace the two `"deployment ID"` in `batch\deploy.bat`. Save the file.
