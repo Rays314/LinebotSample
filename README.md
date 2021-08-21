@@ -1,5 +1,5 @@
 # ConcertBot
-It is a line chatbot written in Google Apps Script.
+It is a line chatbot written in Google Apps Script. It works properly without the Google Apps Script editor.
 It utilizes the following tools:  
 1. Google sheet
 1. node.js
@@ -7,15 +7,28 @@ It utilizes the following tools:
 1. Visual Studio Code
 1. clasp
 1. Github
+
+## Table of Contents
+<details open>
+<summary><b>(click to expand or hide)</b></summary>
+<!-- MarkdownTOC -->
+
+1. [Setup the environment](#setup-the-environment)
+1. [Test for issue](#1)
+<!-- /MarkdownTOC -->
+</details>
+
 ---
+<a id="setup-the-environment"></a>
 ## Setup the environment
+<a id="notice"></a>
 ### Notice:
 * All the following commands are run in a command prompt (terminal) in the working directory of the project in a **single** line per block.
 * [How to open a command prompt in Sindows](https://www.businessinsider.com/how-to-open-command-prompt)
 * Open the File Explorer and copy the path of the working directory.
-* And change to there by the command (replace `<dir>` with the copied path):
-    > `cd <dir>`
-
+* And change to there by the command (replace `<dir>` with the copied path):  
+    `cd <dir>`
+<a id="node-js-and-npm"></a>
 ### Node.js and NPM
 * Functionalities: Run clasp.
 * Installation instructions: https://phoenixnap.com/kb/install-node-js-npm-on-windows
