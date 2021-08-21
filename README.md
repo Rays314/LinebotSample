@@ -16,6 +16,9 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
     1. [Preparations](#preparations)
     1. [Editing and uploading the codes to Github and Google](#editing-and-uploading-the-codes-to-github-and-google)
     1. [Deploy on Google](#deploy-on-google)
+1. [Link LINE and Google Sheet](#link-line-and-google-sheet)
+1. [Link to LINE Notify](#link-to-line-notify)
+1. [Debug](#debug)
     
     
 <!-- /MarkdownTOC -->
@@ -144,6 +147,8 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 
         by typing `b<tab>\d<tab> <description><enter>`
 
+<a id="link-line-and-google-sheet"></a>
+
 ## Link LINE and Google Sheet
 Reference tutorial: https://youtu.be/vS00zQ75xRg
 1. Login to [LINE developers](https://developers.line.biz/). Follow the instructions on it to create an account.
@@ -163,6 +168,8 @@ Reference tutorial: https://youtu.be/vS00zQ75xRg
 1. Deploy a new version with the [above instructions of deploying on Google](#deploy-on-google).
 
 ---
+<a id="link-to-line-notify"></a>
+
 ## Link to LINE Notify
 1. Login to [LINE Notify](https://notify-bot.line.me/).
 1. In [my registered services](https://notify-bot.line.me/my/services/) page, add a service by filling all blanks. Notice that the "Service URL" and "Callback URL" should be as follows.  
@@ -177,6 +184,8 @@ Reference tutorial: https://youtu.be/vS00zQ75xRg
     ```
 1. Deploy a new version with the [above instructions of deploying on Google](#deploy-on-google).
 1. Add the bot to a group and send a message of exactly `連動`. Click the icon that
+
+<a id="debug"></a>
 
 ## Debug
 When the bot does not react properly. Follow the instructions below to debug.
