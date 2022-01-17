@@ -105,19 +105,26 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
         `git add .`  
         `git commit -m "Initial Commit"`  
         `git push -u origin master`
+
 1. Change the default editor of git to VS Code locally. ([Ref.](https://stackoverflow.com/a/36427485))  
     `git config core.editor "code --wait"`
+
 1. Google sheet and project
     1. Create a Google sheet
     1. Create a Google apps script project with "tool" -> "script editor" in the toolbar  
     1. Login to Google with clasp
         `clasp login`
-    1. Link to the project and download a removable `code.js` file to the `src` folder under the working directory with the command. (Note that `<script ID>` can be found in the project settings.)  
+    1. Link to the project (Note that `<script ID>` can be found in the project settings.)  
         `clasp clone <script ID> --rootDir ./src`
+    1. Remove the useless file `code.js`  
+        `rm ./src/code.js` (in Linux)  
+        `del .\src\code.js` (in Windows)
+    1. Update the changes to Google  
+        `clasp push`
 
-1. Deploy on Google with the following instructions in the **legacy** editor (Why lagacy: [#1](/../../issues/1))
-    1. Switch to the legacy editor by entering the script editor and click the “Use legacy editor” on the upper-right corner.
-    1. Click “publish” on the toolbar
+1. Deploy on Google with the following instructions in the **classic** editor (Why classic: [#1](/../../issues/1))
+    1. Switch to the classic editor by entering the script editor and click the “Use classic editor” on the upper-right corner.
+    1. Click “Publish” on the toolbar and then "Deploy as web app..."
     1. Project version: New
     1. Description: Initial deployment
     1. Execute the app as: Me
