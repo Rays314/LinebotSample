@@ -1,4 +1,4 @@
-# ConcertBot
+# Linebot Sameple
 It is a LINE chatbot written in Google Apps Script (Javascript) with Google sheet as its backend. It features that it works properly without the Google Apps Script editor.
 
 ## Table of Contents
