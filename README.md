@@ -173,7 +173,9 @@ Reference tutorial: https://youtu.be/vS00zQ75xRg
 1. In the "LINE Official Account features" section, in the row of "Allow bot to join group chats", click the "Edit" button to switch to "LINE Official Account Manager". In the section of "Toggle features", in the row of "Group and multi-person chats", switch to "Allow account to join groups and multi-person chats".
 1. In the section of "Account details", copy the "Basic ID" (with the @ sign). Add the bot as friend in the LINE platform. It should be able to echo a message now. Otherwise, go to the [debug](#debug) section.
 1. In the side bar, switch from "Account settings" to "Response settings". Disable "Greeting message", disable "Auto-response" and enable "Webhooks"
-1. Go back to the LINE Developers. In the bottom of the Messaging API tab, issue the Channel access token and copy it to the Settings.js file. It will be like the followig sample but with a longer token.
+1. Go back to the LINE Developers. In the bottom of the Messaging API tab, issue the channel access token and copy it.
+1. Duplicate the `SettingsTemplate.js` file in the `src` folder and rename the duplicated one into `Settings.js`.
+1. Paste the channel access token to the `Settings.js` file. It will be like the followig sample but with a longer token.
     ```javascript
     const CHANNEL_ACCESS_TOKEN = 'jhgfdj149qdagy1j/sdhnaf=';
     ```
