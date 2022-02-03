@@ -6,7 +6,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 <summary><b>(click to expand or hide)</b></summary>
 <!-- MarkdownTOC -->
 
-1. [Setup the environment](#setup-the-environment)
+1. [Set up the environment](#set-up-the-environment)
     1. [Notice](#notice)
     1. [Node.js and NPM](#node-js-and-npm)
     1. [Visual Studio Code (optional)](#visual-studio-code)
@@ -25,9 +25,9 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 </details>
 
 ---
-<a id="setup-the-environment"></a>
+<a id="set-up-the-environment"></a>
 
-## Setup the environment
+## Set up the environment
 
 <a id="notice"></a>
 
