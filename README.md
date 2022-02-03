@@ -32,11 +32,13 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 <a id="notice"></a>
 
 ### Notice:
-* All the following commands are run in a command prompt (terminal) in the working directory of the project in a **single** line per block. In detail, ...
+* All the commands in this file are run in a command prompt (terminal) in the working directory of the project in a **single** line per command block. To enter into the working directory, you have to
     1. [Open a command prompt in Windows](https://www.businessinsider.com/how-to-open-command-prompt)
     1. Open the File Explorer and copy the path of the working directory.
     1. Enter there by the following command (replace `<dir>` with the copied path):  
     `cd <dir>`
+    1. Tips: If you clone this repo, you can just double-click the `enterCurrentDirectory.bat` in the file explorer of the Windows.
+* After the first time of the setup, this section can be skipped for the projects in the future.
 
 <a id="node-js-and-npm"></a>
 
@@ -50,7 +52,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 * Functionalities: Editing codes off line
 * Installation instructions:
     * Download and install VS Code from [its official website](https://code.visualstudio.com/).
-    * Make the following `jsconfig.json` file in the root of the working directory to use IntelliSense to reference stuffs among different files.
+    * Make the following `jsconfig.json` file in the root of the working directory to use IntelliSense to reference stuffs among different files. (This step can be skipped if you clone this repo.)
         ```json
         {
             "compilerOptions": {
@@ -60,22 +62,20 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
         }
         ```
     * Setup Google-apps-script word-completion in VS Code ([Ref.](https://yagisanatode.com/2019/04/01/working-with-google-apps-script-in-visual-studio-code-using-clasp/)):
-        * Create a folder to store codes
-        * Run the command. (It is installed only in the current project)  
-        `npm install @types/google-apps-script`
+        * Run the command. 
+        `npm install @types/google-apps-script -g`
 
 <a id="clasp"></a>
 
 ### Clasp
 * Functionalities: Update the changes of codes on a computer to Google.
 * Installation instructions ([Ref.](https://developers.google.com/apps-script/guides/clasp)): 
-    * Run the command:
-        `npm install @google/clasp`  
-        Note: You may want to install it globally with the `-g` flag as follows. So that the node modules in this folder will be 2 MB instead of 170 MB.
+    * Run the command:  
         `npm install @google/clasp -g`  
+    * Note: It is recommended to install clasp globally with the `-g` flag as the above. As a result, there will not be duplicated 170MB files in multiple projects.
     
     * Install inquirer if you want. (It is not necessary)  
-        `npm install inquirer`
+        `npm install inquirer -g`
 
 <a id="git"></a>
 
@@ -93,12 +93,15 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 ### Preparations
 1. Set up things of Github  
     1. Sign up on [Github](https://github.com/).
-    1. Create an empty folder locally as the working directory.
-    1. Clone the repo to the working directory with the commands ([Ref.1](https://stackoverflow.com/questions/29368837/copy-a-git-repo-without-history) [Ref.2](https://www.cyberciti.biz/faq/how-to-remove-non-empty-directory-in-linux/)).  
+    1. Create an **empty** folder locally as the working directory.
+    1. Clone the repo to the working directory with the commands ([Ref.1](https://stackoverflow.com/questions/29368837/copy-a-git-repo-without-history) [Ref.2](https://www.cyberciti.biz/faq/how-to-remove-non-empty-directory-in-linux/)). If the folder is not empty, try [the commands on stack overflow](https://stackoverflow.com/questions/5377960/git-whats-the-best-practice-to-git-clone-into-an-existing-folder/13852329#13852329).  
     `git clone https://github.com/Rays314/LinebotSample`
     1. Remove the commit history in the original repository.  
         `rm -rf .git` (in Linux)  
         `rmdir .git /S /Q` (in Windows)  
+    1. Remove the readme file in the original repository. (You may want to have a link to [this file](https://github.com/Rays314/LinebotSample/blob/master/README.md) in your readme file to help people set things up.)  
+        `rm README.md` (in Linux)  
+        `del README.md` (in Windows)
     1. [Create a new repository](https://docs.github.com/en/get-started/quickstart/create-a-repo) and copy the repo path (hyperlink) as `<path>`.
     1. Create the first commit to the new repository.  
         `git remote add origin <path>`  
@@ -110,17 +113,12 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
     `git config core.editor "code --wait"`
 
 1. Google sheet and project
-    1. Create a Google sheet
-    1. Create a Google apps script project with "tool" -> "script editor" in the toolbar  
-    1. Login to Google with clasp
+    1. Create a Google sheet.
+    1. Create a Google apps script project with "Extensions" -> "Apps script" in the toolbar.
+    1. Login to Google with clasp.  
         `clasp login`
-    1. Link to the project (Note that `<script ID>` can be found in the project settings.)  
+    1. Link to the project and download a removable `code.js` file to the `src` folder under the working directory with the command. (Note that `<script ID>` can be found in the project settings.)  
         `clasp clone <script ID> --rootDir ./src`
-    1. Remove the useless file `code.js`  
-        `rm ./src/code.js` (in Linux)  
-        `del .\src\code.js` (in Windows)
-    1. Update the changes to Google  
-        `clasp push`
 
 1. Deploy on Google with the following instructions in the **classic** editor (Why classic: [#1](/../../issues/1))
     1. Switch to the classic editor by entering the script editor and click the “Use classic editor” on the upper-right corner.
@@ -133,12 +131,10 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 <a id="editing-and-uploading-the-codes-to-github-and-google"></a>
 
 ### Editing and uploading the codes to Github and Google
-1. Edit…
-1. Upload to Github  (Why git before clasp: [#3](/../../issues/3)) ([More commands](https://docs.google.com/document/d/1c-OrQLbNHiUpPAVxULZvyaGUupKESsC5f1XQFVBI12A))  
-    `git add .`
-
-    `git commit`
-
+1. Edit files.
+1. Upload to Github  (Why git before clasp: [#3](/../../issues/3))  
+    `git add .`  
+    `git commit`  
     `git push`
 1. Upload to Google  
     `clasp push`
@@ -152,7 +148,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
 <a id="deploy-on-google"></a>
 
 ### Deploy on Google
-1. Get the `<deployment ID>`. It is followed by `“@1 - Initial deployment”` from the the result of the command. (Why you should get: [#2](/../../issues/2))  
+1. Get the `<deployment ID>`. It is followed by `“@1 - Initial deployment”` from the the result of the command. (Why you should get it: [#2](/../../issues/2))  
     `clasp deployments`
 1. Deploy on Google  
     `clasp deploy -d <description> -i <deployment ID>`
@@ -163,8 +159,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
     1. (Do it once) Get the `<deployment ID>` and replace the two `"deployment ID"` in `batch\deploy.bat`. Save the file.
     1. `ctrl + shift + `\` (backtick) to open an integrated terminal in VS Code
     1. Run the batch file. (Replace `<description>` by the **double-quoted** (surrounded by ") **ASCII** description of the version to be deployed.)  
-        `batch\deploy.bat <description>`
-
+        `batch\deploy.bat <description>`  
         by typing `b<tab>\d<tab> <description><enter>`
 
 <a id="link-line-and-google-sheet"></a>
@@ -210,7 +205,7 @@ Reference tutorial: https://youtu.be/vS00zQ75xRg
 ## Debug
 When the bot does not react properly. Follow the instructions below to debug.
 1. Open the Google sheet linked to this project and check for the `Exe log` and the `Fetch log` tabs.
-1. Use `clasp open` to open the Apps Script editor. (Or in the tool bar of the Google sheet, Tools -> Script editor) Swtich to the execution tab to check the function that emits an exception.
+1. Use `clasp open` command to open the Apps Script editor. (Or in the tool bar of the Google sheet, click "Extensions" -> "Apps script".) Swtich to the execution tab to check the function that emits an exception.
 1. Save and deploy a new version to Google.
-1. Use `logImmediately` function to log the info to the `Exe log` sheet.
+1. Insert `logImmediately` function to some potential function to log the info to the `Exe log` sheet.
 1. Follow the function-call stack and check for the newest added codes.
