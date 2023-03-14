@@ -76,6 +76,7 @@ It is a LINE chatbot written in Google Apps Script (Javascript) with Google shee
     
     * Install inquirer if you want. (It is not necessary)  
         `npm install inquirer -g`
+* Note: Clasp cannot be run in PowerShell.
 
 <a id="git"></a>
 
